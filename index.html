@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Notai — Termina la consulta con la historia ya escrita</title>
 <meta name="description" content="Notai graba tu consulta y en 30 segundos te da la historia dietética estructurada, lista para revisar y guardar. Totalmente personalizable a tu forma de trabajar.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='12' fill='%23C1613A'/><text x='20' y='28' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='22' fill='%23FBF5E9'>N</text></svg>">
 <style>
   :root {
-    --bg: #0b1210;
-    --bg-alt: #0f1a17;
-    --card: #131f1c;
-    --card-border: #223530;
-    --text: #eef3f1;
-    --text-muted: #9db3ac;
-    --accent: #4fd1a5;
-    --accent-soft: #1d3630;
-    --accent-hover: #6fe0ba;
+    --bg: #FBF5E9;
+    --bg-alt: #F3E8D3;
+    --card: #FFFDF7;
+    --card-border: #E7DBBE;
+    --text: #2A2117;
+    --text-muted: #7C6F5C;
+    --accent: #C1613A;
+    --accent-soft: #F3DCC7;
+    --accent-hover: #A8502E;
+    --on-accent: #FBF5E9;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,6 +40,13 @@
     padding: 0 1.5rem;
   }
 
+  /* ---------- logo ---------- */
+  .logo-mark {
+    flex-shrink: 0;
+    display: block;
+    border-radius: 28%;
+  }
+
   /* ---------- header ---------- */
   header {
     padding: 1.25rem 0;
@@ -51,27 +60,19 @@
   }
 
   .brand {
-    font-weight: 700;
-    font-size: 1.05rem;
+    font-weight: 800;
+    font-size: 1.3rem;
     letter-spacing: -0.02em;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-  }
-
-  .brand .dot {
-    width: 0.55rem;
-    height: 0.55rem;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px var(--accent);
+    gap: 0.65rem;
   }
 
   header nav a {
     text-decoration: none;
     color: var(--text-muted);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     padding: 0.6rem 1.1rem;
     border-radius: 0.5rem;
     background: var(--accent-soft);
@@ -79,12 +80,26 @@
     transition: background 0.15s ease, color 0.15s ease;
   }
 
-  header nav a:hover { color: var(--accent); }
+  header nav a:hover { color: var(--accent-hover); }
 
   /* ---------- hero ---------- */
   .hero {
-    padding: 4.5rem 0 3rem;
+    padding: 4rem 0 3rem;
     text-align: center;
+  }
+
+  .hero-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-brand .wordmark {
+    font-weight: 800;
+    font-size: 1.9rem;
+    letter-spacing: -0.03em;
   }
 
   .eyebrow {
@@ -93,7 +108,7 @@
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--accent-hover);
     background: var(--accent-soft);
     border: 1px solid var(--card-border);
     padding: 0.35rem 0.9rem;
@@ -135,7 +150,8 @@
 
   .btn-primary {
     background: var(--accent);
-    color: #06120e;
+    color: var(--on-accent);
+    box-shadow: 0 10px 24px -10px rgba(193, 97, 58, 0.55);
   }
 
   .btn-primary:hover {
@@ -219,7 +235,7 @@
     height: 2.3rem;
     border-radius: 50%;
     background: var(--accent-soft);
-    color: var(--accent);
+    color: var(--accent-hover);
     border: 1px solid var(--card-border);
     display: flex;
     align-items: center;
@@ -320,6 +336,7 @@
     max-width: 32rem;
     margin: 0 auto;
     text-align: left;
+    box-shadow: 0 20px 45px -25px rgba(42, 33, 23, 0.25);
   }
 
   .field {
@@ -340,7 +357,7 @@
     padding: 0.8rem 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--card-border);
-    background: var(--bg);
+    background: var(--bg-alt);
     color: var(--text);
     font-size: 0.95rem;
   }
@@ -363,7 +380,7 @@
     padding: 0.65rem 0.85rem;
     border: 1px solid var(--card-border);
     border-radius: 0.5rem;
-    background: var(--bg);
+    background: var(--bg-alt);
     cursor: pointer;
     font-size: 0.9rem;
     color: var(--text-muted);
@@ -399,6 +416,13 @@
     border-top: 1px solid var(--card-border);
   }
 
+  footer .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
   @media (max-width: 640px) {
     .adapt-grid { grid-template-columns: 1fr; }
     form { padding: 1.5rem; }
@@ -410,7 +434,13 @@
 
 <header>
   <div class="wrap">
-    <div class="brand"><span class="dot"></span>Notai</div>
+    <div class="brand">
+      <svg class="logo-mark" width="34" height="34" viewBox="0 0 40 40" role="img" aria-label="Notai">
+        <rect width="40" height="40" rx="12" fill="#C1613A"/>
+        <text x="20" y="28" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#FBF5E9">N</text>
+      </svg>
+      Notai
+    </div>
     <nav><a href="#acceso">Solicitar acceso</a></nav>
   </div>
 </header>
@@ -420,6 +450,13 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
+      <div class="hero-brand">
+        <svg class="logo-mark" width="60" height="60" viewBox="0 0 40 40" role="img" aria-label="Notai">
+          <rect width="40" height="40" rx="12" fill="#C1613A"/>
+          <text x="20" y="28" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#FBF5E9">N</text>
+        </svg>
+        <span class="wordmark">Notai</span>
+      </div>
       <span class="eyebrow">Para nutricionistas con consulta propia</span>
       <h1>Termina la consulta con la historia ya escrita.</h1>
       <p class="subtitle">Notai graba la sesión y en 30 segundos tienes la historia dietética estructurada, lista para revisar y guardar.</p>
@@ -442,7 +479,7 @@
   <!-- FLUJO DE LA TRANSCRIPCIÓN -->
   <section>
     <div class="wrap">
-      <h2 class="section-title">Cómo funciona, paso a paso</h2>
+      <h2 class="section-title">Cómo funciona Notai, paso a paso</h2>
       <p class="section-lead">Un flujo simple, sin fricción, pensado para no cambiar cómo ya trabajas.</p>
       <div class="flow">
         <div class="flow-step">
@@ -491,7 +528,7 @@
   <!-- SE ADAPTA A TI -->
   <section>
     <div class="wrap">
-      <h2 class="section-title">Se adapta a ti, no al revés</h2>
+      <h2 class="section-title">Notai se adapta a ti, no al revés</h2>
       <div class="adapt-grid">
         <div class="adapt-card">
           <span class="icon">🧩</span>
@@ -523,7 +560,7 @@
   <!-- CTA FINAL + FORMULARIO -->
   <section class="final-cta" id="acceso">
     <div class="wrap">
-      <h2 class="section-title">Solicitar acceso anticipado</h2>
+      <h2 class="section-title">Solicitar acceso anticipado a Notai</h2>
       <p class="slots">Estoy dando acceso a 10 nutricionistas para afinarlo con casos reales. Sin coste durante la prueba.</p>
 
       <form>
@@ -571,7 +608,13 @@
 </main>
 
 <footer>
-  &copy; 2026 Notai
+  <div class="wrap">
+    <svg class="logo-mark" width="28" height="28" viewBox="0 0 40 40" role="img" aria-label="Notai">
+      <rect width="40" height="40" rx="12" fill="#C1613A"/>
+      <text x="20" y="28" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#FBF5E9">N</text>
+    </svg>
+    &copy; 2026 Notai
+  </div>
 </footer>
 
 </body>
