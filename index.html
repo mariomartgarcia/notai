@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Notai — Termina la consulta con la historia ya escrita</title>
 <meta name="description" content="Notai graba tu consulta y en 30 segundos te da la historia dietética estructurada, lista para revisar y guardar. Totalmente personalizable a tu forma de trabajar.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='12' fill='%23C1613A'/><text x='20' y='28' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='22' fill='%23FBF5E9'>N</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='12' fill='%23C1613A'/><path d='M20,13 C13,9 6,13 6,21 C6,29 12,34 18,34 C19,34.6 21,34.6 22,34 C28,34 34,29 34,21 C34,13 27,9 20,13 Z' fill='%23A8502E'/><path d='M19.5,13 C20.3,10.5 22.5,8.6 25,8' stroke='%235C3A26' stroke-width='1.8' fill='none' stroke-linecap='round'/><ellipse cx='26' cy='9' rx='4' ry='2.1' fill='%238FA06B' transform='rotate(-30 26 9)'/><path d='M11,18 C15,14.5 19,14.5 23,18 C26,20.5 23,22.7 20,20.7' stroke='%23FBF5E9' stroke-width='1.5' fill='none' stroke-linecap='round'/><path d='M10,23 C14,20 18,20 22,24 C25,27 21,28 18,26' stroke='%23FBF5E9' stroke-width='1.5' fill='none' stroke-linecap='round'/><path d='M12,28 C16,26 20,27 24,29' stroke='%23FBF5E9' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>">
 <style>
   :root {
     --bg: #FBF5E9;
@@ -450,14 +450,24 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo-notai" viewBox="0 0 40 40">
+      <rect width="40" height="40" rx="12" fill="#C1613A"/>
+      <path d="M20,13 C13,9 6,13 6,21 C6,29 12,34 18,34 C19,34.6 21,34.6 22,34 C28,34 34,29 34,21 C34,13 27,9 20,13 Z" fill="#A8502E"/>
+      <path d="M19.5,13 C20.3,10.5 22.5,8.6 25,8" stroke="#5C3A26" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <ellipse cx="26" cy="9" rx="4" ry="2.1" fill="#8FA06B" transform="rotate(-30 26 9)"/>
+      <path d="M11,18 C15,14.5 19,14.5 23,18 C26,20.5 23,22.7 20,20.7" stroke="#FBF5E9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M10,23 C14,20 18,20 22,24 C25,27 21,28 18,26" stroke="#FBF5E9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M12,28 C16,26 20,27 24,29" stroke="#FBF5E9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
 
 <header>
   <div class="wrap">
     <div class="brand">
-      <svg class="logo-mark" width="34" height="34" viewBox="0 0 40 40" role="img" aria-label="Notai">
-        <rect width="40" height="40" rx="12" fill="#C1613A"/>
-        <text x="20" y="28" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#FBF5E9">N</text>
-      </svg>
+      <svg class="logo-mark" width="34" height="34" viewBox="0 0 40 40" role="img" aria-label="Notai"><use href="#logo-notai"/></svg>
       Notai
     </div>
     <nav><a href="#acceso">Solicitar acceso</a></nav>
@@ -470,10 +480,7 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-brand">
-        <svg class="logo-mark" width="60" height="60" viewBox="0 0 40 40" role="img" aria-label="Notai">
-          <rect width="40" height="40" rx="12" fill="#C1613A"/>
-          <text x="20" y="28" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#FBF5E9">N</text>
-        </svg>
+        <svg class="logo-mark" width="60" height="60" viewBox="0 0 40 40" role="img" aria-label="Notai"><use href="#logo-notai"/></svg>
         <span class="wordmark">Notai</span>
       </div>
       <span class="eyebrow">Para nutricionistas con consulta propia</span>
@@ -628,10 +635,7 @@
 
 <footer>
   <div class="wrap">
-    <svg class="logo-mark" width="28" height="28" viewBox="0 0 40 40" role="img" aria-label="Notai">
-      <rect width="40" height="40" rx="12" fill="#C1613A"/>
-      <text x="20" y="28" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="22" fill="#FBF5E9">N</text>
-    </svg>
+    <svg class="logo-mark" width="28" height="28" viewBox="0 0 40 40" role="img" aria-label="Notai"><use href="#logo-notai"/></svg>
     &copy; 2026 Notai
   </div>
 </footer>
