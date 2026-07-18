@@ -651,9 +651,25 @@
         </div>
 
         <div class="field">
+          <label>¿Te interesaría que el informe diera un paso más y generase también una propuesta de plan nutricional personalizado?</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="plan_nutricional" value="si mucho"> Sí, me interesaría mucho</label>
+            <label class="radio-option"><input type="radio" name="plan_nutricional" value="como apoyo"> Sí, como borrador de apoyo — la decisión final sigue siendo mía</label>
+            <label class="radio-option"><input type="radio" name="plan_nutricional" value="no"> No, prefiero montarlo yo</label>
+            <label class="radio-option"><input type="radio" name="plan_nutricional" value="no se"> No sé todavía</label>
+          </div>
+        </div>
+
+        <div class="field">
           <label for="feedback">¿Qué tendría que cumplir Notai para que realmente lo usaras en tu consulta?</label>
           <span class="field-hint">Sé todo lo crítico que quieras — nos sirve para saber dónde mejorar.</span>
           <textarea id="feedback" name="feedback" placeholder="Por ejemplo: que se integre con..., que reconozca..., que no falle en..."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="sugerencias">¿Alguna otra sugerencia para Notai?</label>
+          <span class="field-hint">Cualquier cosa que se te ocurra, por pequeña que sea.</span>
+          <textarea id="sugerencias" name="sugerencias" placeholder="Cuéntanos lo que quieras..."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary form-submit">Enviar respuesta</button>
