@@ -290,12 +290,16 @@
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 50%;
-    font-size: 1.3rem;
     margin-bottom: 0.9rem;
   }
 
-  .adapt-card:nth-child(1) .icon-wrap { background: var(--accent-soft); }
-  .adapt-card:nth-child(2) .icon-wrap { background: var(--accent2-soft); }
+  .adapt-card .icon-wrap svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .adapt-card:nth-child(1) .icon-wrap { background: var(--accent-soft); color: var(--accent-hover); }
+  .adapt-card:nth-child(2) .icon-wrap { background: var(--accent2-soft); color: var(--accent2-hover); }
 
   .adapt-card h3 {
     font-size: 1.05rem;
@@ -580,12 +584,12 @@
       <h2 class="section-title">Notai se adapta a ti, no al revés</h2>
       <div class="adapt-grid">
         <div class="adapt-card">
-          <span class="icon-wrap">🧩</span>
+          <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2" fill="currentColor" stroke="none"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="16" cy="12" r="2" fill="currentColor" stroke="none"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="12" cy="18" r="2" fill="currentColor" stroke="none"/></svg></span>
           <h3>Informe totalmente personalizable</h3>
           <p>Eliges las secciones, el orden y el formato que ya usas en tu consulta. No hay una plantilla fija que tengas que aceptar tal cual.</p>
         </div>
         <div class="adapt-card">
-          <span class="icon-wrap">🌱</span>
+          <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20 L12 11"/><path d="M12 11 C12 6 8 5 5 6 C5 9 8 12 12 11 Z"/><path d="M12 14 C12 10 16 9 19 10 C19 13 15 16 12 14 Z"/><line x1="7" y1="20" x2="17" y2="20"/></svg></span>
           <h3>No es un producto cerrado</h3>
           <p>Notai está en construcción contigo: se ajusta según cómo trabajas tú, no al revés. Tu feedback cambia directamente cómo evoluciona.</p>
         </div>
